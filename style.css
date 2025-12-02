@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121213;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 90%;
+}
+
+header {
+    border-bottom: 1px solid #3a3a3c;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    color: #f7b731;
+}
+
+/* The Grid */
+.tile-container {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px;
+    margin: 30px 0;
+}
+
+.tile-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+}
+
+.tile {
+    width: 62px;
+    height: 62px;
+    border: 2px solid #3a3a3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.correct {
+    background-color: #538d4e;
+    border-color: #538d4e;
+}
+
+.present {
+    background-color: #b59f3b;
+    border-color: #b59f3b;
+}
+
+.absent {
+    background-color: #3a3a3c;
+    border-color: #3a3a3c;
+}
+
+.active {
+    border-color: #818384;
+}
+
+/* Keyboard */
+.key-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.key-row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.key {
+    width: 43px;
+    height: 58px;
+    background-color: #818384;
+    margin: 0 3px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.key-wide {
+    width: 65px;
+}
+
+#message-container {
+    height: 30px;
+    color: #f7b731;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(-5px); }
+    20% { transform: translateX(5px); }
+    30% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    60% { transform: translateX(5px); }
+    70% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    90% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
